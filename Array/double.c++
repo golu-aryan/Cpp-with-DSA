@@ -19,4 +19,4 @@ int main()
         cout << n[i]*2;
     }
     return 0;
-}
+} 

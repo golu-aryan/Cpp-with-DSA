@@ -1,3 +1,4 @@
+//Write a program to enter number by the user and check the number which is available or not in array elements with use of Linear Search
 #include <iostream>
 using namespace std;
 bool search(int arr[], int size, int key)

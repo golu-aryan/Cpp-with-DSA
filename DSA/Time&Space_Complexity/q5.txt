@@ -1,0 +1,6 @@
+for (int i = 1; i < n; i++) {
+    i *= k;
+}
+
+Time complexity = O(logk n)
+Explanation: Because the loop will run kc-1 times, where c is the number of times i can be multiplied by k before i reaches n. Hence, kc-1=n. Now to find the value of c we can apply log and it becomes logkn.

@@ -1,0 +1,11 @@
+What is the time complexity of the following code:
+
+int a = 0;
+for(int i = 0; i<n; i++){
+    for(j = n; j>1; j--){
+        a = a + i + j;
+    }
+}
+
+The time complexity is :- O(n*n) - O(n^2)
+

@@ -1,0 +1,18 @@
+what is the time and space complexity of the following code:-
+
+
+
+    int a = 0, b = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        a += rand();
+    }
+    for (int j = 0; j < m; j++)
+    {
+        b += rand();
+    }
+    The time complexity = O(n+m) and space complexity = O(1).
+    
+Explanation: The first loop is O(N) and the second loop is O(M). Since N and M are independent variables, so we can’t say which one is the leading term. Therefore Time complexity of the given problem will be O(N+M).
+Since variables size does not depend on the size of the input, therefore  Space Complexity will be constant or O(1)

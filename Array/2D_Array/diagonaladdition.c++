@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define SIZE 3  // Define the size of the matrix
+#define SIZE 5  // Define the size of the matrix
 
 int main() {
     int matrix[SIZE][SIZE];  // Declare a 5x5 matrix

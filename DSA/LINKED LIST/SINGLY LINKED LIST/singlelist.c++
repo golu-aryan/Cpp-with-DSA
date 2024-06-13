@@ -27,7 +27,7 @@ public:
     }
 };
 
-void insertAtHead(Node *&head, int d) // for new node insert at left side which is head
+void insertAtHead(Node* &head, int d) // for new node insert at left side which is head
 {
     // New node create
     Node *temp = new Node(d);
@@ -35,14 +35,14 @@ void insertAtHead(Node *&head, int d) // for new node insert at left side which 
     head = temp;
 }
 
-void insertAtTail(Node *&tail, int d) // for new node insert at right side which is tail
+void insertAtTail(Node* &tail, int d) // for new node insert at right side which is tail
 {
     Node *temp = new Node(d);
     tail->next = temp;
     tail = temp;
 }
 
-void print(Node *&head)
+void print(Node* &head)
 {
     Node *temp = head;
     while (temp != NULL)
@@ -52,7 +52,7 @@ void print(Node *&head)
     }
     cout << endl;
 }
-void insertAtPosition(Node *&head, Node *&tail, int p, int d) // new node insert at any position
+void insertAtPosition(Node* &head, Node* &tail, int p, int d) // new node insert at any position
 {
     if (p == 1)
     { // if at the first position
@@ -64,7 +64,7 @@ void insertAtPosition(Node *&head, Node *&tail, int p, int d) // new node insert
     while (cnt < p - 1)
     {
         temp = temp->next;
-        cnt++;
+        cnt++; 
     }
     // inserting atlast position
     if (temp->next == NULL)
@@ -74,7 +74,7 @@ void insertAtPosition(Node *&head, Node *&tail, int p, int d) // new node insert
     }
 
     // creating a node for d
-    Node *NodeToInsert = new Node(d);
+    Node* NodeToInsert = new Node(d);
     NodeToInsert->next = temp->next;
     temp->next = NodeToInsert;
 }
@@ -110,13 +110,13 @@ void deleteNode(int p, Node* &head)
 
 int main()
 {
-    Node *node1 = new Node(10); // Creating new node by calling Node()function
+    Node* node1 = new Node(10); // Creating new node by calling Node()function
     // cout << node1->data;        // If you put value the data in Node()function then the output is 10 with NULL :10&0
     // cout << node1->next << endl;
 
     // head pointed to node1
-    Node *head = node1;
-    Node *tail = node1;
+    Node* head = node1;
+    Node* tail = node1;
 
     print(head); // head output is 10
     insertAtTail(tail, 12);

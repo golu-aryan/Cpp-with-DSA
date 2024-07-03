@@ -119,7 +119,7 @@ int main()
     Node* tail = node1;
 
     print(head); // head output is 10
-    insertAtTail(tail, 12);
+    insertAtHead(head, 12);
     print(head); // head output is 12 10
 
     insertAtTail(tail, 15);

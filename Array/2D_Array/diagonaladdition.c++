@@ -4,7 +4,7 @@
 
 int main() {
     int matrix[SIZE][SIZE];  // Declare a 5x5 matrix
-    int mainDiagonalSum = 0;  // Initialize sum for the main diagonal
+    int mainDiagonalSum = 0;  // Initialize sum for the basics diagonal
     int secondaryDiagonalSum = 0;  // Initialize sum for the secondary diagonal
 
     // Input the elements of the 5x5 matrix
@@ -16,9 +16,9 @@ int main() {
         }
     }
 
-    // Calculate the sum of the main diagonal and the secondary diagonal
+    // Calculate the sum of the basics diagonal and the secondary diagonal
     for (int i = 0; i < SIZE; i++) {
-        mainDiagonalSum += matrix[i][i];  // Sum of main diagonal elements
+        mainDiagonalSum += matrix[i][i];  // Sum of basics diagonal elements
         secondaryDiagonalSum += matrix[i][SIZE - i - 1];  // Sum of secondary diagonal elements
     }
 
@@ -32,7 +32,7 @@ int main() {
     }
 
     // Display the sums of the diagonals
-    printf("\nSum of the main diagonal: %d\n", mainDiagonalSum);
+    printf("\nSum of the basics diagonal: %d\n", mainDiagonalSum);
     printf("Sum of the secondary diagonal: %d\n", secondaryDiagonalSum);
 
     return 0;

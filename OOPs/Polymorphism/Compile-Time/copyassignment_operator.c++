@@ -20,7 +20,7 @@ class A{
     }
 };
 
-int main() 
+int main()
 {
     A oj1;
     oj1.getdata();

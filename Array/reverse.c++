@@ -17,7 +17,7 @@ void printArray(int arr[], int n){
     }
     cout << endl;
 }
-int main() 
+int main()
 {
     int arr[6] = {1,4,0,5,-2,15};
     int ar[5] = {2,6,3,9,4};

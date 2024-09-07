@@ -3,7 +3,7 @@ using namespace std;
 class A{
         //Output is 1 byte 
 };
-int main() 
+int main()
 {
     A a;
     cout << sizeof(a) << endl;

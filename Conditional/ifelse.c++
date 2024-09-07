@@ -8,10 +8,10 @@ int main() {
     cin >> b;
 
     if(a>b) {
-        cout << "a is greater than b";
+        cout << "a is greaters than b";
     }
     else if(b>a){
-        cout << "b is greater than a";
+        cout << "b is greaters than a";
     }
     else {
         cout << "sry! ";

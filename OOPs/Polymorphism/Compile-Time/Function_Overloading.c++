@@ -13,7 +13,7 @@ class A{
         return 1;
     }
 };
-int main() 
+int main()
 {
     A a;
     a.function();

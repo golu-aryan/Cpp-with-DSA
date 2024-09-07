@@ -17,7 +17,7 @@ class Dog: public Animal{
 class GermanSepherd: public Dog{
 
 };
-int main() 
+int main()
 {
     GermanSepherd g;
     g.speak();

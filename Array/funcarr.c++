@@ -6,7 +6,7 @@ int printArray(int arr[], int size){
     }
     cout << "Printing Done"<<endl;
 }
-int main() 
+int main()
 {
     int n[10] = {13,13,1,2,5};
     printArray(n,4);

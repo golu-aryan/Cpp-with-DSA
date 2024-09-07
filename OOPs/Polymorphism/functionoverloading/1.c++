@@ -12,7 +12,7 @@ int add(int a, int b,int c)
     return a+b+c;
 }
 
-int main()
+int basics()
 {
     int result = add(3,4);
     cout << "result="<<result << endl;

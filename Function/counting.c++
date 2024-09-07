@@ -7,7 +7,7 @@ void printCounting(int n){
         cout << i << " ";
     }
 }
-int main() 
+int main()
 {
     int n;
     cout << "Enter number:" << endl;

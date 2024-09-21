@@ -8,13 +8,14 @@ public:
     Node *prev;
     Node *next;
 
-    // constructor
+    // Constructor for insert data
     Node(int d)
     {
         this->data = d;
         this->prev = NULL;
         this->next = NULL;
     }
+    // Destructor for delete data
     ~Node()
     {
         int val = this->data;
@@ -51,7 +52,7 @@ int getLength(Node *head)
     }
     return len;
 }
-
+// Insert node at Head
 void insertAtHead(Node *&tail, Node *&head, int d)
 {
     // Empty list
@@ -60,7 +61,7 @@ void insertAtHead(Node *&tail, Node *&head, int d)
         Node *temp = new Node(d);
         head = temp;
         tail = temp;
-    } 
+    }
     else
     {
         // new node create
@@ -70,7 +71,7 @@ void insertAtHead(Node *&tail, Node *&head, int d)
         head = temp;
     }
 }
-
+// Insert Node at Tail
 void insertAtTail(Node *&tail, Node *&head, int d)
 {
     if (tail == NULL)
@@ -88,7 +89,7 @@ void insertAtTail(Node *&tail, Node *&head, int d)
         tail = temp;
     }
 }
-
+// Insert Node at any Position
 void insertAtPosition(Node *&tail, Node *&head, int position, int d)
 {
     // insert at start
@@ -121,8 +122,8 @@ void insertAtPosition(Node *&tail, Node *&head, int position, int d)
     temp->next = nodeToInsert;
     nodeToInsert->prev = temp;
 }
-
-void deleteNode(int position, Node *head)
+// Delete Node
+void deleteNode(int position, Node *&head)
 {
     // deleting first or start node
     if (position == 1)
@@ -178,6 +179,9 @@ int main()
     print(head);
 
     deleteNode(1, head);
+    print(head);
+
+    deleteNode(4, head);
     print(head);
 
     return 0;

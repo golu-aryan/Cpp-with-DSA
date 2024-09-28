@@ -51,7 +51,7 @@ void insertNode(Node *&tail, int element, int d)
         curr->next = temp;
     }
 }
-
+//Traversing circular linked list 
 void print(Node *tail)
 {
     Node *temp = tail;

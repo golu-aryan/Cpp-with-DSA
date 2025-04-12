@@ -28,6 +28,7 @@ public:
 void insertNode(Node *&tail, int element, int d)
 {
     // assuming that the element is present in the list
+
     // empty list
     if (tail == NULL)
     {
@@ -51,10 +52,15 @@ void insertNode(Node *&tail, int element, int d)
         curr->next = temp;
     }
 }
-//Traversing circular linked list 
+// Traversing circular linked list
 void print(Node *tail)
 {
     Node *temp = tail;
+    //Empty List
+    if (tail == NULL) {
+        cout << "List is Empty" << endl;
+        return;
+    }
     do
     {
         cout << tail->data << " ";
@@ -69,27 +75,33 @@ void deleteNode(Node *&tail, int value)
     // empty list
     if (tail == NULL)
     {
-        cout << " List is empty, Please check again:" << endl;
+        cout << "List is empty, Please check again:" << endl;
         return;
     }
     else
     {
         // non - empty
-        // assuming that 'Value' is prese
+        // assuming that 'Value' is present in the linked list
         Node *prev = tail;
-        Node *curr = prev -> next;
+        Node *curr = prev->next;
 
-        while (curr -> data != value)
+        while (curr->data != value)
         {
             prev = curr;
             curr = curr->next;
         }
-        prev -> next = curr -> next;
-        if (tail == curr)
+        prev->next = curr->next;
+        // 1 Node Linked List
+        if (curr == prev)
+        {
+            tail = NULL;
+        }
+        //>=2 Node Linked List
+        else if (tail == curr)
         {
             tail = prev;
         }
-        curr -> next = NULL;
+        curr->next = NULL;
         delete curr;
     }
 }
@@ -108,8 +120,13 @@ int main()
 
     insertNode(tail, 3, 88);
     print(tail);
-     
-     
+
+    insertNode(tail, 3, 4);
+    print(tail);
+
+    deleteNode(tail, 3);
+    print(tail);
+
     deleteNode(tail, 3);
     print(tail);
     return 0;
